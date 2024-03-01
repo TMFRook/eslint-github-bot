@@ -8,7 +8,9 @@
     "lint:fix": "npm run lint -- --fix",
     "start": "node ./src/app.js",
     "test": "npm run lint && jest --colors --verbose",
-    "test:cover": "jest --colors --coverage"
+    "test:cover": "jest --colors --coverage",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Gyandeep Singh <gyandeeps@gmail.com>",
   "license": "MIT",
@@ -18,7 +20,8 @@
     "moment": "^2.21.0",
     "moment-timezone": "^0.5.23",
     "probot": "^7.4.0",
-    "probot-scheduler": "^1.0.3"
+    "probot-scheduler": "^1.0.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "eslint": "^5.9.0",
@@ -47,5 +50,6 @@
   },
   "engines": {
     "node": ">=7.7"
-  }
+  },
+  "snyk": true
 }
